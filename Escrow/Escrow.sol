@@ -54,9 +54,11 @@ contract Escrow {
         user_balances[admin] = 0;
     }
 
-
     function getCollectedCommission() external view returns(uint) {
         return user_balances[admin];
     }
 
+    function getUserDeposit(address _user) external view returns(uint) {
+        return user_balances[_user];
+    }
 }
