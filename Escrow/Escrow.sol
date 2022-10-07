@@ -46,5 +46,12 @@ contract Escrow {
         payable(admin).transfer(user_balances[admin]);
         user_balances[admin] = 0;
     }
+    function setAdmin(address newAdmin) external {
+        require(msg.sender == admin);
+        require(newAdmin != address(0));
+        admin = newAdmin;
+        user_balances[newAdmin] = usegit statusr_balances[admin];
+        user_balances[admin] = 0;
+    }
 
 }
