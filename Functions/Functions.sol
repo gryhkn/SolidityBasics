@@ -6,7 +6,7 @@ contract Functions {
     // Public: We can access from everywhere to this functions
     // Private: We can not see this function from outside of this contract, but we can call it inside the contract
     // Internal: We can not access this function 
-    // External: 
+    // External: We can not this function inside of the this contract. Just outside.
 
     function funcPublic() public pure returns(string memory) {
         return "This is an public function.";
