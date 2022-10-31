@@ -9,11 +9,13 @@ contract Controls {
         hashedPass = keccak256(abi.encode(_pass)); // we hashed the _pass input.
     }
 
+    //In this function, we control the password user input when contract deployed in constructor with login functions input.
     function login(string memory _password) public view returns (string memory) {
-        if (hashedPass == keccak256(abi.encode(_password))) {
-            return "Basarili";
+        // Compares the input of this function with the input of the constructor.
+        if (hashedPass == keccak256(abi.encode(_password))) { //keccak256 is a one of the hash functions.
+            return "Success"; // If they are equals, then return "Success"
         } else {
-            return "Basarisiz";
+            return "Failed"; // If they are not equal, then return "Failed"
         }
     }
 }
