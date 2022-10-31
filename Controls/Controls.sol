@@ -28,7 +28,7 @@ contract Controls {
 
 
     /*
-        Like other languages (C, C++, JS), there is "if else" statement in solidity.
+        Like other languages (C, C++, JS), there is "else if" statement in solidity.
         Here is how to use:
 
         if(controls) {
