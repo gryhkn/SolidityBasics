@@ -17,5 +17,48 @@ contract Controls {
         } else {
             return "Failed"; // If they are not equal, then return "Failed"
         }
+
+        /* 
+        Of course we didn't have to use if-else structure for this example. We could use basically below statement:
+
+        return (hashedPass == keccak256(abi.encode(_password))) ? "Success" : "Failed" ;
+ 
+        */
     }
+
+
+    /*
+        Like other languages (C, C++, JS), there is "if else" statement in solidity.
+        Here is how to use:
+
+        if(controls) {
+            //codes
+        } else if (controls) {
+            //codes
+        } else if (contols) {
+            //codes
+        } else {
+            //codes
+        }
+    */
+
+    
+    // Here is the Logical Operators
+    /*
+        x == y   --> x is equal to y
+        x != y   --> x is not equal to y
+        x < y    --> x is less than y
+        x <= y   --> x is less than or equal to y
+        x > y    --> x is greater than y
+        x >= y   --> x is greater than or equal to y
+    
+        x && y   --> the AND operator -- true if both x and y are true
+        x || y   --> the OR operator -- true if either x or y (or both) are true
+        !x       --> the NOT operator (negation) -- true if x is false
+
+        (x > 0 && y > 0 && z > 0)  -->  all three of (x, y, z) are positive
+        (x < 0 || y < 0 || z < 0)  -->  at least one of the three variables is negative
+    */
+
+
 }
